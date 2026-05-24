@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "name": "mod_breadcrumbs",
+  "type": "module",
+  "vendor": "klucon",
+  "extension_id": "klucon/mod_breadcrumbs",
+  "version": "0.1.0",
+  "display_name": "Drobečková navigace",
+  "display_name_key": "extensions.name.mod_breadcrumbs",
+  "description": "Frontend modul pro drobečkovou navigaci podle položek com_menu.",
+  "license": "MIT",
+  "author": {
+    "name": "KLUCON",
+    "url": "https://klucon.cz"
+  },
+  "links": {
+    "homepage": "https://marketplace.klucon.cz",
+    "repository": "https://github.com/klucon/mod_breadcrumbs"
+  },
+  "compatibility": {
+    "core_min": "0.2.15",
+    "core_max": null,
+    "python": ">=3.12",
+    "database": ["mysql", "postgresql"]
+  },
+  "package": {
+    "python_package": "mod_breadcrumbs",
+    "entrypoint": "src.modules.mod_breadcrumbs",
+    "setup_function": "setup",
+    "module_module": "module",
+    "render_function": "render"
+  },
+  "permissions": [],
+  "i18n": {
+    "domain": "mod_breadcrumbs",
+    "locales_path": "i18n",
+    "required_locales": ["cs_CZ", "en_GB"]
+  },
+  "migrations": {
+    "enabled": false,
+    "path": "migrations"
+  },
+  "security": {
+    "requires_signature": true,
+    "capabilities": ["module.render"]
+  },
+  "settings_schema": [
+    {
+      "key": "menu_alias",
+      "type": "text",
+      "label": "Menu alias nebo ID"
+    },
+    {
+      "key": "home_label",
+      "type": "text",
+      "label": "Text úvodní položky",
+      "default": "Úvod"
+    }
+  ],
+  "marketplace": {
+    "category": "navigation",
+    "tags": ["breadcrumb", "menu", "navigation"],
+    "featured": false
+  },
+  "min_cms_version": "0.2.15",
+  "categories": ["navigation"],
+  "supported_locales": ["cs_CZ", "en_GB"],
+  "changelog": "První verze drobečkové navigace nad com_menu."
+}
